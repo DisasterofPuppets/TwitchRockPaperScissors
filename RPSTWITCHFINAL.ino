@@ -251,7 +251,7 @@ void startup()
 {
       for (int i = 0; i < NUM_LEDS; i++)
       {
-        leds[i] = CRGB::Blue;
+        leds[i] = CRGB::White;
         FastLED.show();
       }
 
@@ -259,7 +259,7 @@ void startup()
 
 void loser()
 {
-      clearThem();
+
   
       for (int i = 0; i < NUM_LEDS; i++)
       {
@@ -272,7 +272,7 @@ void loser()
 
 void lDraw()
 {
-      clearThem();
+
   
       for (int i = 0; i < NUM_LEDS; i++)
       {
