@@ -9,6 +9,7 @@
 
 int debugdelay = 1000;
 int lDelay = 500;
+int servoDelay = 100;
 
 volatile int RemainingCycles = 0;
 
@@ -52,7 +53,7 @@ char* loss[]={"Don't feel bad, I was cheating...I mean playing this when you wer
 #define COLOR_ORDER GRB
 #define COOLING 55
 #define SPARKING 120
-#define BRIGHTNESS 255
+#define BRIGHTNESS 30
 
 
 //Twitch Api Instance
@@ -630,18 +631,18 @@ void RPS(int Player) // This is the main code
           if (Player == 0) // ROCK
             {
               myservo.write(120);
-              delay(30);
+              delay(servoDelay);
             }
             else if  (Player == 1)// PAPER
             {
               myservo.write(60);
-              delay(30);
+              delay(servoDelay);
             }
             else 
             {
               (Player == 2);// SCISSORS
               myservo.write(0);
-              delay(30);
+              delay(servoDelay);
             }
     
     
@@ -673,7 +674,7 @@ void RPS(int Player) // This is the main code
         {
     
           myservo.write(0);
-          delay(30);
+          delay(servoDelay);
           
            //outputs to twitch chat
           //username here::::::::::::::::::::::::::::::::::::::::::
@@ -697,7 +698,7 @@ void RPS(int Player) // This is the main code
     {
     
     myservo.write(60);
-    delay(30);
+    delay(servoDelay);
     
     //outputs to twitch chat
           //username here::::::::::::::::::::::::::::::::::::::::::
@@ -720,7 +721,7 @@ void RPS(int Player) // This is the main code
     {
     
           myservo.write(60);
-          delay(30);
+          delay(servoDelay);
           
     //outputs to twitch chat
           //username here::::::::::::::::::::::::::::::::::::::::::
@@ -743,7 +744,7 @@ void RPS(int Player) // This is the main code
         {
          
           myservo.write(120);
-          delay(30); 
+          delay(servoDelay); 
           
           //outputs to twitch chat
           //username here::::::::::::::::::::::::::::::::::::::::::
@@ -767,7 +768,7 @@ void RPS(int Player) // This is the main code
         {
     
           myservo.write(120);
-          delay(30);
+          delay(servoDelay);
           
           //outputs to twitch chat
           //username here::::::::::::::::::::::::::::::::::::::::::
@@ -790,7 +791,7 @@ void RPS(int Player) // This is the main code
         {
     
           myservo.write(0);
-          delay(30);
+          delay(servoDelay);
     
           //outputs to twitch chat
           //username here::::::::::::::::::::::::::::::::::::::::::
