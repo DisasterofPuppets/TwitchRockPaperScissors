@@ -80,7 +80,7 @@ void setup() {
   }
 
   myservo.attach(14,540,2400); //D5
-  myservo.write(60); // set to default position
+  myservo.write(90); // set to default position
 
   FastLED.addLeds<WS2812, LED_PIN, COLOR_ORDER>(leds,NUM_LEDS).setCorrection( TypicalLEDStrip );
   FastLED.setBrightness(BRIGHTNESS);
@@ -173,7 +173,6 @@ void showTime()
   
  for (int st = 0; st < 10; st++)
   {
-      int delayRand = random(100,500);
       int servoRand = random(0,3);
 
       if (servoRand == 0)
@@ -183,15 +182,15 @@ void showTime()
       }
       else if (servoRand == 1)
       {
-        int servoAngle = 60;
+        int servoAngle = 90;
         myservo.write(servoAngle); 
       }
       else if (servoRand == 2)
       {
-        int servoAngle = 120;
+        int servoAngle = 210;
         myservo.write(servoAngle); 
       }
-      delay(delayRand); 
+      delay(20); 
   }
   
 }
@@ -630,12 +629,12 @@ void RPS(int Player) // This is the main code
         {
           if (Player == 0) // ROCK
             {
-              myservo.write(120);
+              myservo.write(210);
               delay(servoDelay);
             }
             else if  (Player == 1)// PAPER
             {
-              myservo.write(60);
+              myservo.write(90);
               delay(servoDelay);
             }
             else 
@@ -697,7 +696,7 @@ void RPS(int Player) // This is the main code
     
     {
     
-    myservo.write(60);
+    myservo.write(90);
     delay(servoDelay);
     
     //outputs to twitch chat
@@ -720,7 +719,7 @@ void RPS(int Player) // This is the main code
     
     {
     
-          myservo.write(60);
+          myservo.write(90);
           delay(servoDelay);
           
     //outputs to twitch chat
@@ -743,7 +742,7 @@ void RPS(int Player) // This is the main code
     
         {
          
-          myservo.write(120);
+          myservo.write(210);
           delay(servoDelay); 
           
           //outputs to twitch chat
@@ -767,7 +766,7 @@ void RPS(int Player) // This is the main code
     
         {
     
-          myservo.write(120);
+          myservo.write(210);
           delay(servoDelay);
           
           //outputs to twitch chat
