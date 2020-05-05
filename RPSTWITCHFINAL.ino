@@ -53,7 +53,7 @@ char* loss[]={"Don't feel bad, I was cheating...I mean playing this when you wer
 #define COLOR_ORDER GRB
 #define COOLING 55
 #define SPARKING 120
-#define BRIGHTNESS 30
+#define BRIGHTNESS 150
 
 
 //Twitch Api Instance
@@ -190,7 +190,7 @@ void showTime()
         int servoAngle = 210;
         myservo.write(servoAngle); 
       }
-      delay(20); 
+      delay(100); 
   }
   
 }
