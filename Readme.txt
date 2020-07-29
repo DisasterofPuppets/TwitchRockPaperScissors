@@ -1,4 +1,4 @@
-
+Added RPSKCVersion which allows us to remove need to enter text on chat reward. Also reduces code substantially.
 
 
 Bare bones ESP8266 code for Rock,Paper, Scissors
